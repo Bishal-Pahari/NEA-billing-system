@@ -5,23 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment</title>
+
+    <link rel="stylesheet" href="../src/styles.css" />
   </head>
   <body>
+    <nav class="navbar">
+      <img
+        src="../assets/images/neaLogo.png"
+        alt="Logo of NEA"
+        class="logo-img"
+      />
+
+      <button class="btn-primary" onclick="submit">Sign In</button>
+    </nav>
     <h1 class="header">Bill</h1>
 
-    <form action="">
+    <form class="input-form" action="">
       <div class="input-field">
-        <label for="bid">BID</label>
+        <label for="bid">BID:</label>
         <input type="text" name="bid" placeholder="Enter BID" />
       </div>
 
       <div class="input-field">
-        <label for="bdate">Bill Date</label>
+        <label for="bdate">Bill Date:</label>
         <input type="date" name="bdate" />
       </div>
 
       <div class="input-field">
-        <label for="byear">Bill Year</label>
+        <label for="byear">Bill Year:</label>
         <select name="byear">
           <option value="2080">2080</option>
           <option value="2079">2079</option>
@@ -39,7 +50,7 @@
       </div>
 
       <div class="input-field">
-        <label for="bmonth">Bill Month</label>
+        <label for="bmonth">Bill Month:</label>
         <select name="bmonth">
           <option value="Baisakh">Baisakh</option>
           <option value="Jestha">Jestha</option>
@@ -57,13 +68,40 @@
       </div>
 
       <div class="input-field">
-        <label for="cusid">Customer ID</label>
+        <label for="cusid">Customer ID:</label>
         <input type="text" name="cusid" placeholder="Enter Customer Id" />
       </div>
 
       <div class="input-field">
+        <label for="currRead">Current Reading:</label>
+        <input
+          type="text"
+          name="currRead"
+          placeholder="Enter Current Reading"
+        />
+      </div>
+
+      <div class="input-field">
+        <label for="prevRead">Previous Reading:</label>
+        <input
+          type="text"
+          name="prevRead"
+          placeholder="Enter Previous Reading"
+        />
+      </div>
+
+      <div class="input-field submit-btn">
         <input type="submit" />
       </div>
     </form>
+
+    <footer>
+      <p>
+        Copyright © <span id="year-change"></span> Nepal Electricity Authority ❘
+        All Rights Reserved.
+      </p>
+    </footer>
+
+    <script src="../src/index.js"></script>
   </body>
 </html>
