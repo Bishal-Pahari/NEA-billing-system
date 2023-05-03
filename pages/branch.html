@@ -5,29 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>branch</title>
+
+    <link rel="stylesheet" href="../src/styles.css" />
   </head>
   <body>
+    <nav class="navbar">
+      <img
+        src="../assets/images/neaLogo.png"
+        alt="Logo of NEA"
+        class="logo-img"
+      />
+
+      <button class="btn-primary" onclick="submit">Sign In</button>
+    </nav>
     <h1 class="header">Add Branch</h1>
 
-    <form action="">
+    <form class="input-form" action="">
       <div class="input-field">
         <label for="branch-id">Branch Id</label>
         <input type="text" name="branch-id" placeholder="Enter Branch ID" />
       </div>
 
       <div class="input-field">
-        <label for="name">Branch Id</label>
+        <label for="name">Branch Name:</label>
         <input type="text" name="branch-id" placeholder="Enter Branch name" />
       </div>
 
       <div class="input-field">
-        <label for="status">Status</label>
+        <label for="status">Status:</label>
         <input type="checkbox" name="status" />
       </div>
 
-      <div class="input-field">
+      <div class="input-field submit-btn">
         <input type="submit" />
       </div>
     </form>
+
+    <footer>
+      <p>
+        Copyright © <span id="year-change"></span> Nepal Electricity Authority ❘
+        All Rights Reserved.
+      </p>
+    </footer>
+    <script src="../src/index.js"></script>
   </body>
 </html>
