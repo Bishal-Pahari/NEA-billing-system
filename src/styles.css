@@ -6,6 +6,7 @@
   color: black;
   font-family: Arial, Helvetica, sans-serif;
   list-style: inside;
+  user-select: none;
 }
 
 .logo-img {
@@ -62,6 +63,8 @@ footer {
 /* Pages Styling */
 .header {
   margin: 1rem 1rem 0;
+  font-size: 2.5rem;
+  color: #444141;
 }
 
 .input-form {
@@ -83,6 +86,7 @@ label {
 
 input {
   padding: 0.3rem;
+  outline: none;
 }
 
 .submit-btn {
