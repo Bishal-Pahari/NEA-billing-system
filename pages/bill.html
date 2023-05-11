@@ -21,7 +21,7 @@
 
     <h1 class="header">Bill</h1>
 
-    <form class="input-form" action="" method="post">
+    <form class="input-form" action="../php/billSubmit.php" method="post">
       <div class="input-field">
         <label for="bid">BID:</label>
         <input type="text" name="bid" placeholder="Enter BID" />
@@ -89,6 +89,11 @@
           name="prevRead"
           placeholder="Enter Previous Reading"
         />
+      </div>
+
+      <div class="input-field" method="post">
+        <label for="bamount">Bill Amount:</label>
+        <input type="text" name="bamount" placeholder="Enter Bill Amount" />
       </div>
 
       <div class="input-field submit-btn">
