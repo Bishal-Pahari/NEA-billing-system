@@ -5,46 +5,27 @@
   text-decoration: none;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
-  list-style: inside;
+  list-style: circle;
   user-select: none;
 }
 
 .logo-img {
-  width: 85px;
+  width: 25rem;
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
-  background: rgb(177, 176, 176);
+  padding: 1rem 2rem;
+  background: #edf2f9;
 }
 
-.btn-primary {
-  padding: 0.5rem;
-  border-radius: 10%;
-  -webkit-border-radius: 10%;
-  -moz-border-radius: 10%;
-  -ms-border-radius: 10%;
-  -o-border-radius: 10%;
-  border: 1px solid rgb(36, 36, 36);
-  font-weight: 600;
-}
-
-.btn-primary:hover {
-  color: white;
-  background: #444141;
-  cursor: pointer;
-}
-
-.input-form,
-.pages-container {
-  border: 1px solid black;
-  width: 40%;
-  margin: 10rem auto 0;
-  padding: 2rem;
-  font-size: 25px;
+.btn-primary:hover,
+.submit:hover {
+  color: white !important;
+  background: rgb(12, 109, 158) !important;
+  cursor: pointer !important;
 }
 
 .pages-redirect:hover {
@@ -52,12 +33,13 @@
 }
 
 footer {
-  background: rgb(177, 176, 176);
+  background: #edf2f9;
   padding: 10px 0;
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
+  box-shadow: 0 0 10px rgb(0 0 0 / 80%);
 }
 
 /* Pages Styling */
@@ -68,29 +50,116 @@ footer {
   color: #444141;
 }
 
-.input-form {
-  font-size: 15px;
-  margin: 10px auto;
-}
-
-.input-field {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  margin: 1rem 0;
-}
-
-label {
-  display: inline-block;
-  width: 100px;
-}
-
-input {
-  padding: 0.3rem;
-  outline: none;
-}
-
 .submit-btn {
   justify-content: flex-end;
   margin-right: 1.6rem;
+}
+
+/* testing */
+.container {
+  width: 30rem;
+  margin: 2rem auto 0;
+  box-sizing: border-box;
+  box-shadow: 0 0 2px rgb(0 0 0 / 80%);
+  padding: 30px 30px;
+}
+
+.container h1 {
+  color: rgb(12, 109, 158);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container .box {
+  position: relative;
+  width: 100%;
+  margin: 30px 0;
+}
+.container .box input {
+  position: relative;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 22px;
+  padding: 8px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background: transparent;
+  z-index: 2;
+  transition: 0.9s;
+}
+
+input[type="date"]:required:invalid::-webkit-datetime-edit {
+  user-select: none;
+  transition: 2s ease;
+  color: transparent;
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -ms-transition: 2s ease;
+  -o-transition: 2s ease;
+}
+
+input[type="date"]:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+
+.container .box input:focus {
+  border-color: rgb(12, 109, 158);
+}
+
+.container .box span {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  transition: 0.9s;
+  -webkit-transition: 0.9s;
+  -moz-transition: 0.9s;
+  -ms-transition: 0.9s;
+  -o-transition: 0.9s;
+}
+.container .box input + span {
+  top: 31%;
+}
+.container .box input:focus + span,
+.container .box input:valid + span {
+  color: rgb(12, 109, 158);
+  top: -20%;
+}
+
+.homepage-container > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  font-weight: 600;
+}
+
+select {
+  padding: 0.2rem 1rem;
+}
+
+.btn-primary,
+.submit {
+  padding: 0.5rem !important;
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+  border: 1px solid rgb(12, 109, 158) !important;
+  background: #edf2f9 !important;
+  font-weight: 600 !important;
+  color: rgb(12, 109, 158) !important;
+  cursor: pointer;
+  transition: 0.1s ease !important;
+  -webkit-transition: 0.1s ease !important;
+  -moz-transition: 0.1s ease !important;
+  -ms-transition: 0.1s ease !important;
+  -o-transition: 0.1s ease !important;
+}
+
+.checkbox-status {
+  display: flex;
+  align-content: center;
 }

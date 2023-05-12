@@ -19,21 +19,20 @@
       <button class="btn-primary" onclick="submit">Sign In</button>
     </nav>
 
-    <h1 class="header">Bill</h1>
-
-    <form class="input-form" action="../php/billSubmit.php" method="post">
-      <div class="input-field">
-        <label for="bid">BID:</label>
-        <input type="text" name="bid" placeholder="Enter BID" />
+    <form class="container" action="" method="post">
+      <h1>Bill</h1>
+      <div class="box">
+        <input required type="text" name="bid" />
+        <span>Bill ID</span>
       </div>
 
-      <div class="input-field">
-        <label for="bdate">Bill Date:</label>
-        <input type="date" name="bdate" />
+      <div class="box">
+        <input required type="date" name="bdate" />
+        <span>Bill Date</span>
       </div>
 
-      <div class="input-field">
-        <label for="byear">Bill Year:</label>
+      <div class="box">
+        <label for="byear">Bill Year: </label>
         <select name="byear">
           <option value="2080">2080</option>
           <option value="2079">2079</option>
@@ -50,8 +49,8 @@
         </select>
       </div>
 
-      <div class="input-field">
-        <label for="bmonth">Bill Month:</label>
+      <div class="box">
+        <label for="byear">Bill Month: </label>
         <select name="bmonth">
           <option value="Baisakh">Baisakh</option>
           <option value="Jestha">Jestha</option>
@@ -68,36 +67,23 @@
         </select>
       </div>
 
-      <div class="input-field">
-        <label for="cusid">Customer ID:</label>
-        <input type="text" name="cusid" placeholder="Enter Customer Id" />
+      <div class="box">
+        <input required type="text" name="cusid" />
+        <span>Customer ID</span>
       </div>
 
-      <div class="input-field">
-        <label for="currRead">Current Reading:</label>
-        <input
-          type="text"
-          name="currRead"
-          placeholder="Enter Current Reading"
-        />
+      <div class="box">
+        <input required type="text" name="currRead" />
+        <span>Current Reading</span>
       </div>
 
-      <div class="input-field" method="post">
-        <label for="prevRead">Previous Reading:</label>
-        <input
-          type="text"
-          name="prevRead"
-          placeholder="Enter Previous Reading"
-        />
+      <div class="box">
+        <input required type="text" name="prevRead" />
+        <span>Previous Reading</span>
       </div>
 
-      <div class="input-field" method="post">
-        <label for="bamount">Bill Amount:</label>
-        <input type="text" name="bamount" placeholder="Enter Bill Amount" />
-      </div>
-
-      <div class="input-field submit-btn">
-        <input type="submit" />
+      <div class="box">
+        <input class="submit" type="submit" value="Submit" />
       </div>
     </form>
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payment Option</title>
+    <title>branch</title>
 
     <link rel="stylesheet" href="../src/styles.css" />
   </head>
@@ -18,30 +18,26 @@
 
       <button class="btn-primary" onclick="submit">Sign In</button>
     </nav>
-    <h1 class="header">Payment Option</h1>
 
-    <form class="input-form" action="" method="post">
-      <div class="input-field">
-        <label for="poid">Payment Option ID</label>
-        <input type="text" name="poid" placeholder="Enter Payment Option ID" />
+    <form class="container" action="" method="post">
+      <h1>Add Branch</h1>
+      <div class="box">
+        <input required type="text" name="bid" />
+        <span>Branch ID</span>
       </div>
 
-      <div class="input-field">
-        <label for="paymentName">Payment Name</label>
-        <select name="paymentName">
-          <option value="eSewa">eSewa</option>
-          <option value="Khalti">Khalti</option>
-          <option value="FonePay">FonePay</option>
-        </select>
+      <div class="box">
+        <input required type="text" name="bname" />
+        <span>Branch Name</span>
       </div>
 
-      <div class="input-field">
-        <label for="status">Status</label>
-        <input type="checkbox" name="status" />
+      <div class="box checkbox-status">
+        <label for="byear">Status: </label>
+        <input required type="checkbox" name="status" value="true"/>
       </div>
 
-      <div class="input-field submit-btn">
-        <input type="submit" />
+      <div class="box">
+        <input class="submit" type="submit" value="Submit" />
       </div>
     </form>
 

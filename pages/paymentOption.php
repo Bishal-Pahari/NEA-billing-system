@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Demand</title>
+    <title>Payment Option</title>
 
     <link rel="stylesheet" href="../src/styles.css" />
   </head>
@@ -18,31 +18,30 @@
 
       <button class="btn-primary" onclick="submit">Sign In</button>
     </nav>
-    <h1 class="header">Select Demand Type</h1>
 
-    <form class="input-form" action="" method="post">
-      <div class="input-field">
-        <label for="demand-id">DemandType Id:</label>
-        <input type="text" name="demand-id" placeholder="Enter DemandType ID" />
+    <form class="container" action="" method="post">
+      <h1>Payment Option Type</h1>
+      <div class="box">
+        <input required type="text" name="poid" />
+        <span>Payment Option ID</span>
       </div>
 
-      <div class="input-field">
-        <label for="description">Description:</label>
-        <!-- <textarea placeholder="Write Description"></textarea> -->
+      <div class="box">
+        <label for="byear">Bill Year: </label>
         <select name="byear">
-          <option value="5A">5Amp</option>
-          <option value="10A">10Amp</option>
-          <option value="15As">15Amp</option>
+        <option value="eSewa">eSewa</option>
+          <option value="Khalti">Khalti</option>
+          <option value="FonePay">FonePay</option>
         </select>
       </div>
 
-      <div class="input-field">
-        <label for="status">Status:</label>
-        <input type="checkbox" name="status" />
+      <div class="box checkbox-status">
+        <label for="byear">Status: </label>
+        <input required type="checkbox" name="status"/>
       </div>
-
-      <div class="input-field submit-btn">
-        <input type="submit" />
+     
+      <div class="box">
+        <input class="submit" type="submit" value="Submit" />
       </div>
     </form>
 

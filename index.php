@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Billing</title>
 
-    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body>
     <nav class="navbar">
@@ -19,27 +19,28 @@
       <button class="btn-primary" onclick="submit">Sign In</button>
     </nav>
 
-    <div class="pages-container">
+    <div class="container homepage-container">
+      <h1>Admin PANEL</h1>
       <ul>
-        <li><a class="pages-redirect" href="./pages/bill.html">Add Bill</a></li>
+        <li><a class="pages-redirect" href="./pages/bill.php">Add Bill</a></li>
         <li>
-          <a class="pages-redirect" href="./pages/branch.html">Add Branch</a>
+          <a class="pages-redirect" href="./pages/branch.php">Add Branch</a>
         </li>
         <li>
-          <a class="pages-redirect" href="./pages/customer.html"
+          <a class="pages-redirect" href="./pages/customer.php"
             >Add Customer Details</a
           >
         </li>
         <li>
-          <a class="pages-redirect" href="./pages/demand.html"
+          <a class="pages-redirect" href="./pages/demand.php"
             >Add Demand type</a
           >
         </li>
         <li>
-          <a class="pages-redirect" href="./pages/payment.html">Add Payment</a>
+          <a class="pages-redirect" href="./pages/payment.php">Add Payment</a>
         </li>
         <li>
-          <a class="pages-redirect" href="./pages/paymentOption.html"
+          <a class="pages-redirect" href="./pages/paymentOption.php"
             >Add Payment Option</a
           >
         </li>

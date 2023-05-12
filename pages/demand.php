@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>branch</title>
+    <title>Demand</title>
 
     <link rel="stylesheet" href="../src/styles.css" />
   </head>
@@ -18,35 +18,38 @@
 
       <button class="btn-primary" onclick="submit">Sign In</button>
     </nav>
-    <h1 class="header">Add Branch</h1>
-
-    <form class="input-form" action="" method="post">
-      <div class="input-field">
-        <label for="branch-id">Branch Id:</label>
-        <input type="text" name="branch-id" placeholder="Enter Branch ID" />
+    <form class="container" action="" method="post">
+      <h1>Demand Type</h1>
+      <div class="box">
+        <input required type="text" name="demandID" />
+        <span>Demand Type ID</span>
       </div>
 
-      <div class="input-field">
-        <label for="name">Branch Name:</label>
-        <input type="text" name="branch-id" placeholder="Enter Branch name" />
+      <div class="box">
+        <label for="demandTypeID">Demand Type ID: </label>
+        <select name="demandTypeID">
+             <option value="5A">5AMP</option>
+             <option value="10A">10AMP</option>
+             <option value="15A">15AMP</option>
+        </select>
       </div>
-
-      <div class="input-field">
-        <label for="status">Status:</label>
-        <input type="checkbox" name="status" />
+      
+      <div class="box checkbox-status">
+        <label for="byear">Status: </label>
+        <input required type="checkbox" name="status" value="true"/>
       </div>
-
-      <div class="input-field submit-btn">
-        <input type="submit" />
+     
+      <div class="box">
+        <input class="submit" type="submit" value="Submit" />
       </div>
     </form>
-
     <footer>
       <p>
         Copyright © <span id="year-change"></span> Nepal Electricity Authority ❘
         All Rights Reserved.
       </p>
     </footer>
+
     <script src="../src/index.js"></script>
   </body>
 </html>
