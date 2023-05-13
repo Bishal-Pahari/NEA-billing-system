@@ -6,7 +6,8 @@
   color: black;
   font-family: Arial, Helvetica, sans-serif;
   list-style: circle;
-  user-select: none;
+  /* user-select: none; */
+  z-index: 0;
 }
 
 .logo-img {
@@ -33,9 +34,10 @@
 }
 
 footer {
+  z-index: 1;
   background: #edf2f9;
   padding: 10px 0;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -75,6 +77,7 @@ footer {
   width: 100%;
   margin: 30px 0;
 }
+
 .container .box input {
   position: relative;
   border: none;
