@@ -103,16 +103,18 @@
   </footer>
 
   <?php
-  $servername = 'localhost';
-  $username = 'root';
-  $password = '';
-  $dbname = "billing_system";
-
-  $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
+  // $servername = 'localhost';
+  // $username = 'root';
+  // $password = '';
+  // $dbname = "billing_system";
+  
+  // $conn = mysqli_connect($servername, $username, $password, $dbname);
+  
+  // if ($conn->connect_error) {
+  //   die("Connection failed: " . $conn->connect_error);
+  // }
+  
+  include("../php/dbconnect.php");
 
   if (isset($_POST['submit'])) {
     $bid = $_POST['bid'];
