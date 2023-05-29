@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $servername = "localhost";
 $username = "root";
@@ -9,9 +9,6 @@ $dbname = "billing_system";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 //check connection
-if(!$conn){
+if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
-}
-else{
-    echo "Connected successfully";
 }
