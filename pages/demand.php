@@ -23,18 +23,11 @@
   <form class="container" action="" method="post">
     <h1>Demand Type</h1>
     <div class="box">
-      <input required type="text" name="demandID" />
-      <span>Demand Type ID</span>
+      <input required type="text" name="demandTypeID" />
+      <span>Demand Type</span>
     </div>
 
-    <div class="box">
-      <label for="demandTypeID">Demand Type ID: </label>
-      <select name="demandTypeID">
-        <option value="5A">5AMP</option>
-        <option value="10A">10AMP</option>
-        <option value="15A">15AMP</option>
-      </select>
-    </div>
+
 
     <div class="box checkbox-status">
       <label for="byear">Status: </label>

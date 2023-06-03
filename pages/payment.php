@@ -23,10 +23,7 @@
 
   <form class="container" action="" method="post">
     <h1>Payment Type</h1>
-    <div class="box">
-      <input required type="text" name="pid" />
-      <span>Payment ID</span>
-    </div>
+
 
     <div class="box">
       <input required type="text" name="bid" />
@@ -93,8 +90,8 @@
     $rebeatAmount = $_POST['rebeatAmount'];
     $fineAmount = $_POST['fineAmount'];
 
-    $sql = "INSERT INTO `payment` (PID, BID, PDate, PAmount, Payment_Option_Id, Rebeat_Amt, Fine_Amt) 
-    VALUES ('$pid', '$bid', '$pdate', '$pamount', '$paymentTypeId', '$rebeatAmount', '$fineAmount')";
+    $sql = "INSERT INTO `payment` ( BID, PDate, PAmount, Payment_Option_Id, Rebeat_Amt, Fine_Amt) 
+    VALUES ( '$bid', '$pdate', '$pamount', '$paymentTypeId', '$rebeatAmount', '$fineAmount')";
 
     if ($conn->query($sql) === true) {
       echo '<script>alert("Data inserted successfully!")</script>';
