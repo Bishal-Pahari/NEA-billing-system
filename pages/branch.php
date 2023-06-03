@@ -23,10 +23,7 @@
 
   <form class="container" action="" method="post">
     <h1>Add Branch</h1>
-    <div class="box">
-      <input required type="text" name="bid" />
-      <span>Branch ID</span>
-    </div>
+
 
     <div class="box">
       <input required type="text" name="bname" />
@@ -68,7 +65,7 @@
     $bname = $_POST['bname'];
     $status = $_POST['status'];
 
-    $sql = "INSERT INTO `branch` (branch_id, branch_name, currStatus) VALUES ('$bid', '$bname', '$status')";
+    $sql = "INSERT INTO `branch` ( branch_name, currStatus) VALUES ( '$bname', '$status')";
 
     if ($conn->query($sql) === true) {
       echo '<script>alert("Data inserted successfully!")</script>';

@@ -10,6 +10,17 @@
   <link rel="stylesheet" href="../src/styles.css" />
 </head>
 
+
+//db connect
+<?php
+include("../php/dbconnect.php"); //DB connection
+$branchQuery = "SELECT branch_id, branch_name FROM branch";
+$branchResult = $conn->query($branchQuery);
+
+$demandQuery = "SELECT demand_type_id, descrip FROM demandtype";
+$demandResult = $conn->query($demandQuery);
+?>
+
 <body>
   <nav class="navbar">
     <img src="../assets/images/neaLogo.png" alt="Logo of NEA" class="logo-img" />
@@ -20,6 +31,7 @@
       <button class="btn-primary" onclick="submit">Sign In</button>
     </div>
   </nav>
+
   <form class="container" action="" method="post">
     <h1>Add Customer Detail</h1>
     <div class="box">
@@ -27,10 +39,7 @@
       <span>SC NO.</span>
     </div>
 
-    <div class="box">
-      <input required type="text" name="cusid" />
-      <span>Customer ID</span>
-    </div>
+
 
     <div class="box">
       <input required type="name" name="fname" />
@@ -50,18 +59,28 @@
     <div class="box">
       <label for="branchID">Branch ID: </label>
       <select name="branchID">
-        <option value="101">101</option>
+        <!-- <option value="101">101</option>
         <option value="102">102</option>
-        <option value="103">103</option>
+        <option value="103">103</option> -->
+        <?php
+        while ($row = $branchResult->fetch_assoc()) {
+          echo "<option value='" . $row['branch_id'] . "'>" . $row['branch_name'] . "</option>";
+        }
+        ?>
       </select>
     </div>
 
     <div class="box">
       <label for="demandTypeID">Demand Type ID: </label>
       <select name="demandTypeID">
-        <option value="1">5AMP</option>
+        <!-- <option value="1">5AMP</option>
         <option value="2">10AMP</option>
-        <option value="3">15AMP</option>
+        <option value="3">15AMP</option> -->
+        <?php
+        while ($row = $demandResult->fetch_assoc()) {
+          echo "<option value='" . $row['demand_type_id'] . "'>" . $row['descrip'] . "</option>";
+        }
+        ?>
       </select>
     </div>
 
@@ -87,7 +106,8 @@
   // if ($conn->connect_error) {
   //   die("Connection failed: " . $conn->connect_error);
   // }
-  include("../php/dbconnect.php");
+  
+
   if (isset($_POST['submit'])) {
     $scnd = $_POST['scno'];
     $cusid = $_POST['cusid'];
@@ -97,8 +117,8 @@
     $branchID = $_POST['branchID'];
     $demandTypeID = $_POST['demandTypeID'];
 
-    $sql = "INSERT INTO `customer` (SCND, CUSID, Fullname, AddressName, MobileNo, BranchId, demand_type_id) 
-    VALUES ('$scnd', '$cusid', '$fname', '$address', '$mobno', '$branchID', '$demandTypeID')";
+    $sql = "INSERT INTO `customer` (SCND, Fullname, AddressName, MobileNo, BranchId, demand_type_id) 
+    VALUES ('$scnd', '$fname', '$address', '$mobno', '$branchID', '$demandTypeID')";
 
     if ($conn->query($sql) === true) {
       echo '<script>alert("Data inserted successfully!")</script>';

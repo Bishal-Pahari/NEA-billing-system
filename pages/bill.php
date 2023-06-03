@@ -23,10 +23,7 @@
 
   <form class="container" action="" method="post">
     <h1>Bill</h1>
-    <div class="box">
-      <input required type="text" name="bid" />
-      <span>Bill ID</span>
-    </div>
+
 
     <div class="box">
       <input required type="date" name="bdate" />
@@ -126,8 +123,8 @@
     $prevRead = $_POST['prevRead'];
     $billAmount = $_POST['bamount'];
 
-    $sql = "INSERT INTO `bill` (BID, BDate, BYear,BMonth, CUSID, Current_Reading, Prev_Reading, Bamount) 
-     VALUES ('$bid', '$bdate', '$byear', '$bmonth', '$cusid', 
+    $sql = "INSERT INTO `bill` ( BDate, BYear,BMonth, CUSID, Current_Reading, Prev_Reading, Bamount) 
+     VALUES ( '$bdate', '$byear', '$bmonth', '$cusid', 
      '$currRead', '$prevRead', '$billAmount')";
 
     if ($conn->query($sql) === true) {

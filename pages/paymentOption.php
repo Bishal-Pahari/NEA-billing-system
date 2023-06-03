@@ -23,18 +23,20 @@
 
   <form class="container" action="" method="post">
     <h1>Payment Option Type</h1>
-    <div class="box">
-      <input required type="text" name="poid" />
-      <span>Payment Option ID</span>
-    </div>
 
-    <div class="box">
+
+    <!-- <div class="box">
       <label for="paymentMethod">Payment Method: </label>
       <select name="paymentMethod">
         <option value="eSewa">eSewa</option>
         <option value="Khalti">Khalti</option>
         <option value="FonePay">FonePay</option>
       </select>
+    </div> -->
+
+    <div class="box">
+      <input required type="text" name="Payment Method" />
+      <span>Payment Method</span>
     </div>
 
     <div class="box checkbox-status">
