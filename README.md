@@ -19,15 +19,12 @@ PHP
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/Bishal-Pahari/nea-billing-system.git
+```git clone https://github.com/Bishal-Pahari/nea-billing-system.git```
 
 ## Install the dependencies:
 Copy code
 Set up the database connection by (will update later)
 Run the application on a local server.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ## Screenshot
 
