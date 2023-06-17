@@ -19,7 +19,7 @@ PHP
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/your-username/nea-billing-system.git
+git clone https://github.com/Bishal-Pahari/nea-billing-system.git
 
 ## Install the dependencies:
 Copy code
