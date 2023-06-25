@@ -10,12 +10,13 @@
   <link rel="stylesheet" href="./src/styles.css" />
 </head>
 
-<body>
-  <nav class="navbar">
-    <img src="./assets/images/neaLogo.png" alt="Logo of NEA" class="logo-img" />
 
-    <button class="btn-primary" onclick="submit">Sign In</button>
-  </nav>
+<body>
+  <?php
+  $currentPage = basename($_SERVER['PHP_SELF']);
+  include './components/navbar.php';
+  ?>
+
 
   <div class="container homepage-container">
     <h1>Admin PANEL</h1>
@@ -38,6 +39,10 @@
       </li>
       <li>
         <a class="pages-redirect" href="./pages/paymentOption.php">Add Payment Option</a>
+      </li>
+      <li>
+        <a class="pages-redirect" href="./pages/search.php">Search <img src="./assets/images/search.svg"
+            alt="search icon" style="width: 15px"></a>
       </li>
 
     </ul>
