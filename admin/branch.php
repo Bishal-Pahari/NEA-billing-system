@@ -1,3 +1,7 @@
+<?php
+include '../php/sessionVerify.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,12 +39,7 @@
     </div>
   </form>
 
-  <footer>
-    <p>
-      Copyright © <span id="year-change"></span> Nepal Electricity Authority ❘
-      All Rights Reserved.
-    </p>
-  </footer>
+  <?php include '../components/footer.php'; ?>
 
   <?php
   // $servername = "localhost";

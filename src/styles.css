@@ -23,7 +23,8 @@
 }
 
 .btn-primary:hover,
-.submit:hover {
+.submit:hover,
+.btn-primary a:hover {
   color: white !important;
   background: rgb(12, 109, 158) !important;
   cursor: pointer !important;
@@ -165,4 +166,9 @@ select {
 .checkbox-status {
   display: flex;
   align-content: center;
+}
+
+.signup-link {
+  color: #0c6d9e !important;
+  font-weight: 600;
 }
