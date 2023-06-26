@@ -20,7 +20,7 @@ include '../php/sessionVerify.php';
   $currentPage = basename($_SERVER['PHP_SELF']);
   include '../components/navbar.php';
   ?>
-
+  \
   <form class="container" action="" method="post">
     <h1>Bill</h1>
 
