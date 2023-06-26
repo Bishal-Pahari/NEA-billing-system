@@ -1,3 +1,7 @@
+<?php
+include '../php/sessionVerify.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +9,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment Option</title>
+  <title>Payment</title>
 
   <link rel="stylesheet" href="../src/styles.css" />
 </head>
@@ -22,26 +26,37 @@
   </nav>
 
   <form class="container" action="" method="post">
-    <h1>Payment Option Type</h1>
+    <h1>Payment Type</h1>
 
-
-    <!-- <div class="box">
-      <label for="paymentMethod">Payment Method: </label>
-      <select name="paymentMethod">
-        <option value="eSewa">eSewa</option>
-        <option value="Khalti">Khalti</option>
-        <option value="FonePay">FonePay</option>
-      </select>
-    </div> -->
 
     <div class="box">
-      <input required type="text" name="Payment Method" />
-      <span>Payment Method</span>
+      <input required type="text" name="bid" />
+      <span>Bill ID</span>
     </div>
 
-    <div class="box checkbox-status">
-      <label for="byear">Status: </label>
-      <input type="checkbox" name="currStatus" value="1" />
+    <div class="box">
+      <input required type="date" name="pdate" />
+      <span>Payment Date</span>
+    </div>
+
+    <div class="box">
+      <input required type="text" name="pamount" />
+      <span>Payment Amount</span>
+    </div>
+
+    <div class="box">
+      <input required type="text" name="paymentTypeId" />
+      <span>Payment type ID</span>
+    </div>
+
+    <div class="box">
+      <input required type="text" name="rebeatAmount" />
+      <span>Rebeat Amount</span>
+    </div>
+
+    <div class="box">
+      <input required type="text" name="fineAmount" />
+      <span>Fine Amount</span>
     </div>
 
     <div class="box">
@@ -71,11 +86,16 @@
   include("../php/dbconnect.php");
 
   if (isset($_POST['submit'])) {
-    $poid = $_POST['poid'];
-    $paymentMethod = $_POST['paymentMethod'];
-    $currStatus = $_POST['currStatus'];
+    $pid = $_POST['pid'];
+    $bid = $_POST['bid'];
+    $pdate = $_POST['pdate'];
+    $pamount = $_POST['pamount'];
+    $paymentTypeId = $_POST['paymentTypeId'];
+    $rebeatAmount = $_POST['rebeatAmount'];
+    $fineAmount = $_POST['fineAmount'];
 
-    $sql = "INSERT INTO `payment_option` (POID, paymentMethod, currStatus) VALUES ('$poid', '$paymentMethod', '$currStatus')";
+    $sql = "INSERT INTO `payment` ( BID, PDate, PAmount, Payment_Option_Id, Rebeat_Amt, Fine_Amt) 
+    VALUES ( '$bid', '$pdate', '$pamount', '$paymentTypeId', '$rebeatAmount', '$fineAmount')";
 
     if ($conn->query($sql) === true) {
       echo '<script>alert("Data inserted successfully!")</script>';

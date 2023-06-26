@@ -1,3 +1,7 @@
+<?php
+include '../php/sessionVerify.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

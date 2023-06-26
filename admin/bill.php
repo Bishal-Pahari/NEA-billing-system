@@ -1,3 +1,8 @@
+<?php
+include '../php/sessionVerify.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +20,7 @@
   $currentPage = basename($_SERVER['PHP_SELF']);
   include '../components/navbar.php';
   ?>
-
+  \
   <form class="container" action="" method="post">
     <h1>Bill</h1>
 
@@ -87,12 +92,7 @@
   </form>
 
 
-  <footer>
-    <p>
-      Copyright © <span id="year-change"></span> Nepal Electricity Authority ❘
-      All Rights Reserved.
-    </p>
-  </footer>
+  <?php include '../components/footer.php'; ?>
 
   <?php
   // $servername = 'localhost';
