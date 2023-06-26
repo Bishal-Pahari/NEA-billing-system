@@ -56,7 +56,15 @@ include '../php/sessionVerify.php';
             <li>
                 <a class="pages-redirect" href="paymentOption.php">Add Payment Option</a>
             </li>
+            <li>
+                <a class="pages-redirect" href="search.php">Search</a>
+            </li>
         </ul>
+
+
+
+        <!-- search -->
+
     </div>
 
     <?php include '../components/footer.php'; ?>

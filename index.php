@@ -16,6 +16,7 @@ if (!isLoggedIn()) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to Homepage!</title>
   <link rel="stylesheet" type="text/css" href="./src/styles.css">
+
 </head>
 
 <body>
@@ -45,19 +46,10 @@ if (!isLoggedIn()) {
         <h1>Hello,
           <?php echo $_SESSION['user']['username']; ?>
         </h1>
-        <h3 style="text-align: center;">
-          <i>(
-            <?php echo ucfirst($_SESSION['user']['user_type']); ?>)
-          </i>
-        </h3>
-
-
-
-
       <?php endif ?>
-    </div>
 
-  </div>
+
+    </div>
 </body>
 
 </html>
