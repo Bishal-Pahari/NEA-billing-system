@@ -1,3 +1,8 @@
+🚧 Under Construction
+⚠️ This repository is currently under construction.
+
+The billing system is currently being developed to enhance the user experience and add more features. Please note that the application is not fully functional and stable at this stage.
+
 # Nepal Electricity Billing System
 This is a PHP-based web application for managing the billing system of Nepal Electricity Authority. It is developed as a project for the e-Government subject.
 
