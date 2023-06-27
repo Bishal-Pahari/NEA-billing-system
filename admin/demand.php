@@ -15,15 +15,11 @@ include '../php/sessionVerify.php';
 </head>
 
 <body>
-  <nav class="navbar">
-    <img src="../assets/images/neaLogo.png" alt="Logo of NEA" class="logo-img" />
+  <?php
+  $currentPage = basename($_SERVER['PHP_SELF']);
+  include '../components/navbar.php';
+  ?>
 
-    <div class="nav-btn">
-      <a href="../index.php"><button class="btn-primary" onclick="submit">HomePage</button></a>
-
-      <button class="btn-primary" onclick="submit">Sign In</button>
-    </div>
-  </nav>
   <form class="container" action="" method="post">
     <h1>Demand Type</h1>
     <div class="box">

@@ -14,15 +14,10 @@ include '../php/sessionVerify.php';
 </head>
 
 <body>
-  <nav class="navbar">
-    <img src="../assets/images/neaLogo.png" alt="Logo of NEA" class="logo-img" />
-
-    <div class="nav-btn">
-      <a href="../index.php"><button class="btn-primary" onclick="submit">HomePage</button></a>
-
-      <button class="btn-primary" onclick="submit">Sign In</button>
-    </div>
-  </nav>
+  <?php
+  $currentPage = basename($_SERVER['PHP_SELF']);
+  include '../components/navbar.php';
+  ?>
 
   <form class="container" action="" method="post">
     <h1>Payment Option Type</h1>
