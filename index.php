@@ -37,7 +37,10 @@ include './php/dbconnect.php';
       text-align: center;
     }
   </style>
+
+  <script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script>
 </head>
+
 
 <body>
   <?php
@@ -66,6 +69,7 @@ include './php/dbconnect.php';
         </h1>
       <?php endif ?>
 
+      <h3>Search Customer:</h3>
       <form method="post" action="">
         <div class="box">
           <input type="text" name="name" id="name">
@@ -99,6 +103,7 @@ include './php/dbconnect.php';
             $mobileNo = $row['MobileNo'];
             $address = $row['AddressName'];
             $demandType = $row['demand_type_id'];
+            $userId = $row['CUSID'];
 
             $demandQuery = "SELECT descrip FROM demandtype WHERE demand_type_id = '$demandType'";
             $resultDemand = mysqli_query($conn, $demandQuery);
@@ -127,10 +132,76 @@ include './php/dbconnect.php';
         } else {
           echo "<p>No customer found with the provided Name and Number.</p>";
         }
+
+
+        // User Bill Details 
+      
+        $querybill = "SELECT BID, BDate, BYear, Current_Reading, Prev_Reading, Bamount , payment_status FROM bill WHERE CUSID='$userId'";
+
+
+        $result = mysqli_query($conn, $querybill);
+        if (mysqli_num_rows($result) > 0) {
+          $myarray = array();
+          echo "<h2 style=margin:1rem 0;>Bill Details</h2>";
+          echo "<table border = '1' class = 'center'>
+      <tr>
+        <td> Bill Number</td>
+        <td> Bill Amount</td>
+        <td> Bill Date</td>
+        <td> Current Readings</td>
+        <td> Previous Readings</td>
+        <td> Payment status</td>
+      </tr>
+      ";
+
+          while ($row = mysqli_fetch_assoc($result)) {
+
+
+            $BID = $row['BID'];
+            array_push($myarray, $BID);
+            $Bamount = $row['Bamount'];
+            $Byear = $row['BYear'];
+            $CReading = $row['Current_Reading'];
+            $PReading = $row['Prev_Reading'];
+            $status = $row['payment_status'];
+
+            echo "
+        <tr>
+          <td> $BID </td>
+          <td> $Bamount</td>
+          <td> $Byear </td> 
+          <td> $CReading</td> 
+          <td> $PReading</td> 
+          <td>";
+            if ($status) {
+              echo '<a href="./view.php">Paid</a>';
+            } else {
+              echo '<a href="./payment.php?billid=' . urlencode($BID) . '& amount=' . urlencode($Bamount) . '">Pay</a>';
+            }
+            echo "
+          
+          
+          </td>
+
+        </tr>
+        ";
+          }
+          echo "</table>";
+        } else {
+          echo "<p> No Bill Details found for the specified customer</p>";
+        }
+
+
+
+
       }
       ?>
     </div>
   </div>
+
+
+
+
 </body>
 
 </html>
