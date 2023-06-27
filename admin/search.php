@@ -55,9 +55,16 @@ include '../php/sessionVerify.php';
     <div class="container homepage-container">
         <!-- search -->
         <form method="POST" action="">
-            <label for="cusid">Customer ID:</label>
-            <input type="text" name="cusid" id="cusid" required><br><br>
-            <input type="submit" name="submit" value="Search Customer">
+
+            <div class="box">
+                <input type="text" name="cusid" id="cusid" required>
+                <span>Customer Id</span>
+            </div>
+
+            <div class="box">
+                <input class="submit" type="submit" name="submit" value="Search Customer" />
+            </div>
+
         </form>
 
         <?php
@@ -70,7 +77,7 @@ include '../php/sessionVerify.php';
             $result = mysqli_query($conn, $querycus);
 
             if (mysqli_num_rows($result) > 0) {
-                echo "<h2>Customer Details</h2>";
+                echo "<hr> <h1 style=margin:1rem 0;>Search Result</h1>";
 
                 while ($row = mysqli_fetch_assoc($result)) {
                     $fullName = $row['FullName'];
@@ -88,7 +95,7 @@ include '../php/sessionVerify.php';
                     $resultdemand = mysqli_query($conn, $demandquery);
                     $demand1 = mysqli_fetch_assoc($resultdemand);
                     $demanddescp = $demand1['descrip'];
-                    echo "<table border='0' class='center' >
+                    echo "<table ' >
 
           <tr>
             <td>
@@ -122,7 +129,7 @@ include '../php/sessionVerify.php';
             $result = mysqli_query($conn, $querybill);
             if (mysqli_num_rows($result) > 0) {
                 $myarray = array();
-                echo "<h2>Bill Details</h2>";
+                echo "<h2 style=margin:1rem 0;>Bill Details</h2>";
                 echo "<table border = '1' class = 'center'>
       <tr>
         <td> Bill Number</td>
@@ -162,7 +169,7 @@ include '../php/sessionVerify.php';
             $n = sizeof($myarray);
 
             //show the payment details
-            echo "<h2>Payment Details</h2>";
+            echo "<h2 style=margin:1rem 0;>Payment Details</h2>";
             echo "<table border = '1' class = 'center'>
       <tr>
         <td>PID</td>
