@@ -10,7 +10,7 @@
         <a href="index.php?logout='1'"><button class="btn-primary" onclick="submit">Logout</button></a>
     <?php } else { ?>
         <div class="nav-btn">
-            <a href="./index.php"><button class="btn-primary" onclick="submit">HomePage</button></a>
+            <a href="../index.php"><button class="btn-primary" onclick="submit">HomePage</button></a>
             <a href="../php/logout.php"> <button class="btn-primary" onclick="submit"> Logout </button></a>
         </div>
     <?php } ?>
