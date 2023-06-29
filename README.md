@@ -59,10 +59,11 @@ You should now see the NEA Billing System home page.
 
 
 ## Screenshot
-![mobile](https://github.com/Bishal-Pahari/NEA-billing-system/assets/61013432/258498ea-db1e-40fd-81f4-bf4e020ad389)
-![mobile (1)](https://github.com/Bishal-Pahari/NEA-billing-system/assets/61013432/07060556-28d5-4f37-b517-5a46304f35b1)
-![mobile (2)](https://github.com/Bishal-Pahari/NEA-billing-system/assets/61013432/416a80dc-06f6-4d43-85b3-bd865a0422e3)
-![mobile (3)](https://github.com/Bishal-Pahari/NEA-billing-system/assets/61013432/d25523c9-639e-448b-9616-df835b979d57)
+|                       |                       |              
+| :-------------------: | :-------------------: | 
+| ![249160673-258498ea-db1e-40fd-81f4-bf4e020ad389](https://github.com/Bishal-Pahari/NEA-billing-system/assets/61013432/ea9ba4e8-a033-4137-a274-38475167d223) | ![2](https://github.com/Bishal-Pahari/NEA-billing-system/assets/61013432/9bdddd46-b9a2-438a-9533-a81b2cff6f63) |
+| ![3](https://github.com/Bishal-Pahari/NEA-billing-system/assets/61013432/369d7420-378a-491d-a42e-2e0f2c724ebc) | ![4](https://github.com/Bishal-Pahari/NEA-billing-system/assets/61013432/c86d1225-2f2a-49db-b4b8-eb6ccc6784a2) | 
+
 
 
 
