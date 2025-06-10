@@ -1,5 +1,5 @@
 
-⚠️ This billing system  is not stable at this stage.
+
 
 
 # Nepal Electricity Billing System
